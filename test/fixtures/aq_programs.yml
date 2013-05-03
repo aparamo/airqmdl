@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  regulation_id: 1
+  aq_type_id: 1
+  description: MyText
+  public: MyString
+  locale: MyString
+  financiation_id: 1
+  date_of_creation: 2013-05-01 22:14:04
+
+two:
+  name: MyString
+  regulation_id: 1
+  aq_type_id: 1
+  description: MyText
+  public: MyString
+  locale: MyString
+  financiation_id: 1
+  date_of_creation: 2013-05-01 22:14:04

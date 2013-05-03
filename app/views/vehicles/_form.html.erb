@@ -1,0 +1,53 @@
+<%= form_for(@vehicle) do |f| %>
+  <% if @vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+      <% @vehicle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type_id %><br />
+    <%= f.number_field :type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br />
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :efficiency %><br />
+    <%= f.text_field :efficiency %>
+  </div>
+  <div class="field">
+    <%= f.label :emissions %><br />
+    <%= f.text_field :emissions %>
+  </div>
+  <div class="field">
+    <%= f.label :public %><br />
+    <%= f.text_field :public %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_state %><br />
+    <%= f.text_field :registration_state %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_year %><br />
+    <%= f.datetime_select :registration_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit%>
+  </div>
+<% end %>

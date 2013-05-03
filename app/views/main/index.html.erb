@@ -1,0 +1,56 @@
+<div id="home_wrapper">
+
+<h1>Air Quality Management Modeling</h1>
+<div ng-controller="MainCtrl">
+  <form ng-submit="addNode()">
+    <input type="text" ng-model="newNode.name">
+    <input type="submit" value="Add">
+  </form>
+
+  <div >
+    <div ng-repeat="node in nodes">
+      <h3> {{node.name}}</h3>
+      <span ng-show="node.winner" ng-class="{highlight: node == lastWinner}" class="winner">WINNER</span>
+    </div>
+  </div>
+  
+  <button ng-click="drawWinner()">Draw Winner</button>
+</div>
+<br>
+<br>
+<hr>
+<div id="home_organizations" class="span3">
+  <h3>Organizations</h3>
+  <ul>
+  <% @organizations.each do |organization| %>
+    <li class="aqmnode organization">
+      <%= link_to organization.name, organization %></li>
+
+  
+  <% end %>
+  </ul>
+</div>
+<div id="home_programs" class="span3">
+  <h3>Programs</h3>
+  <ul>
+  <% @aq_programs.each do |aq_program| %>
+    <li class="aqmnode program">
+      <%= link_to aq_program.name, aq_program %></li>
+
+  
+  <% end %>
+  </ul>
+</div>
+<div id="home_vehicles" class="span3">
+  <h3>Vehicles</h3>
+  <ul>
+  <% @vehicles.each do |vehicle| %>
+    <li class="aqmnode vehicle">
+      <%= link_to vehicle.name, vehicle %></li>
+
+  
+  <% end %>
+  </ul>
+</div>
+
+</div>

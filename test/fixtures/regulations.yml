@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  aq_program_id: 1
+  vehicle_id: 1
+  description: MyText
+  regulation_type: MyString
+
+two:
+  name: MyString
+  aq_program_id: 1
+  vehicle_id: 1
+  description: MyText
+  regulation_type: MyString

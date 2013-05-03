@@ -1,0 +1,31 @@
+<h1>Listing regulations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Aq program</th>
+    <th>Vehicle</th>
+    <th>Description</th>
+    <th>Regulation type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @regulations.each do |regulation| %>
+  <tr>
+    <td><%= regulation.name %></td>
+    <td><%= regulation.aq_program_id %></td>
+    <td><%= regulation.vehicle_id %></td>
+    <td><%= regulation.description %></td>
+    <td><%= regulation.regulation_type %></td>
+    <td><%= link_to 'Show', regulation %></td>
+    <td><%= link_to 'Edit', edit_regulation_path(regulation) %></td>
+    <td><%= link_to 'Destroy', regulation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Regulation', new_regulation_path %>

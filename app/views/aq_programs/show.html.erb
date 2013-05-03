@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @aq_program.name %>
+</p>
+
+
+<p>
+  <b>Program type:</b>
+  <%= @aq_program.aq_type_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @aq_program.description %>
+</p>
+
+<p>
+  <b>Public:</b>
+  <%= @aq_program.public %>
+</p>
+
+<p>
+  <b>Locale:</b>
+  <%= @aq_program.locale %>
+</p>
+
+<p>
+  <b>Date of creation:</b>
+  <%= @aq_program.date_of_creation %>
+</p>
+<p>
+<b>Vehicles:</b>
+</p>
+ <ul>
+  <% @aq_program.vehicles.each do |vehicle| %>
+    <li>
+      <%= link_to vehicle.name, vehicle %></li>
+  <% end %>
+  </ul>
+  <p>
+<b>Financing Organizations:</b>
+</p>
+ <ul>
+  <% @aq_program.organizations.each do |organization| %>
+    <li>
+      <%= link_to organization.name, organization %></li>
+  <% end %>
+  </ul>
+
+<%= link_to 'Edit', edit_aq_program_path(@aq_program) %> |
+<%= link_to 'Back', aq_programs_path %>

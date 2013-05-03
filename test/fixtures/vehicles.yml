@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type_id: 1
+  description: MyText
+  capacity: MyString
+  efficiency: MyString
+  emissions: MyString
+  public: MyString
+  registration_state: MyString
+  registration_year: 2013-05-01 21:28:07
+
+two:
+  name: MyString
+  type_id: 1
+  description: MyText
+  capacity: MyString
+  efficiency: MyString
+  emissions: MyString
+  public: MyString
+  registration_state: MyString
+  registration_year: 2013-05-01 21:28:07

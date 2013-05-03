@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @regulation.name %>
+</p>
+
+<p>
+  <b>Aq program:</b>
+  <%= @regulation.aq_program_id %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @regulation.vehicle_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @regulation.description %>
+</p>
+
+<p>
+  <b>Regulation type:</b>
+  <%= @regulation.regulation_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_regulation_path(@regulation) %> |
+<%= link_to 'Back', regulations_path %>

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vehicle.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @vehicle.type_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @vehicle.description %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @vehicle.capacity %>
+</p>
+
+<p>
+  <b>Efficiency:</b>
+  <%= @vehicle.efficiency %>
+</p>
+
+<p>
+  <b>Emissions:</b>
+  <%= @vehicle.emissions %>
+</p>
+
+<p>
+  <b>Public:</b>
+  <%= @vehicle.public %>
+</p>
+
+<p>
+  <b>Registration state:</b>
+  <%= @vehicle.registration_state %>
+</p>
+
+<p>
+  <b>Registration year:</b>
+  <%= @vehicle.registration_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

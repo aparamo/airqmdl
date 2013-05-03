@@ -1,0 +1,31 @@
+<h1>Listing financiations</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Program</th>
+    <th>Organization</th>
+    <th>Description</th>
+    <th>Financiation type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @financiations.each do |financiation| %>
+  <tr>
+    <td><%= financiation.name %></td>
+    <td><%= financiation.program_id %></td>
+    <td><%= financiation.organization_id %></td>
+    <td><%= financiation.description %></td>
+    <td><%= financiation.financiation_type %></td>
+    <td><%= link_to 'Show', financiation %></td>
+    <td><%= link_to 'Edit', edit_financiation_path(financiation) %></td>
+    <td><%= link_to 'Destroy', financiation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Financiation', new_financiation_path %>

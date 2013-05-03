@@ -1,0 +1,37 @@
+<%= form_for(@regulation) do |f| %>
+  <% if @regulation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@regulation.errors.count, "error") %> prohibited this regulation from being saved:</h2>
+
+      <ul>
+      <% @regulation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_program_id %><br />
+    <%= f.number_field :aq_program_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_id %><br />
+    <%= f.number_field :vehicle_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :regulation_type %><br />
+    <%= f.text_field :regulation_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

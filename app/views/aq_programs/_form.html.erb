@@ -1,0 +1,68 @@
+<%= form_for(@aq_program) do |f| %>
+  <% if @aq_program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aq_program.errors.count, "error") %> prohibited this aq_program from being saved:</h2>
+
+      <ul>
+      <% @aq_program.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_type_id %><br />
+    <%= f.number_field :aq_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :public %><br />
+    <%= f.text_field :public %>
+  </div>
+  <div class="field">
+    <%= f.label :locale %><br />
+    <%= f.text_field :locale %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_creation %><br />
+    <%= f.datetime_select :date_of_creation %>
+  </div>
+  <div class="field well">
+    <label for="aq_program[vehicle_ids][]"><h3>Vehicles in the program</h3></label>
+<br>
+    <%= hidden_field_tag "aq_program[vehicle_ids][]", nil %>
+    <% Vehicle.all.each do |vehicle| %>
+      <%= check_box_tag "aq_program[vehicle_ids][]", vehicle.id, @aq_program.vehicle_ids.include?(vehicle.id), id: dom_id(vehicle) %>
+      <%= label_tag dom_id(vehicle), vehicle.name %><br>
+    <% end %>
+  </div>
+
+  <div class="field well">
+    <label for="aq_program[organization_ids][]"><h3>Organizations in the program</h3></label>
+<br>
+    <%= hidden_field_tag "aq_program[organization_ids][]", nil %>
+    <% Organization.all.each do |organization| %>
+      <%= check_box_tag "aq_program[organization_ids][]", organization.id, @aq_program.organization_ids.include?(organization.id), id: dom_id(organization) %>
+      <%= label_tag dom_id(organization), organization.name %><br>
+    <% end %>
+  </div>
+  
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  
+
+
+<% end %>

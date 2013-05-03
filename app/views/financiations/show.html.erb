@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @financiation.name %>
+</p>
+
+<p>
+  <b>Program:</b>
+  <%= @financiation.program_id %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @financiation.organization_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @financiation.description %>
+</p>
+
+<p>
+  <b>Financiation type:</b>
+  <%= @financiation.financiation_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_financiation_path(@financiation) %> |
+<%= link_to 'Back', financiations_path %>
